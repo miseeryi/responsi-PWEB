@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konversi Panjang</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Konversi Satuan Panjang</h1>
+        
+        <div class="converter">
+            <form id="converterForm" method="POST" action="convert.php">
+                <div class="input-group">
+                    <label>Nilai:</label>
+                    <input type="number" id="value" name="value" step="any" placeholder="Masukkan nilai" required>
+                </div>
+
+                <div class="select-group">
+                    <div>
+                        <label>Dari:</label>
+                        <select id="fromUnit" name="fromUnit" required>
+                            <option value="mm">Milimeter (mm)</option>
+                            <option value="cm">Sentimeter (cm)</option>
+                            <option value="m" selected>Meter (m)</option>
+                            <option value="km">Kilometer (km)</option>
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <label>Ke:</label>
+                        <select id="toUnit" name="toUnit" required>
+                            <option value="mm">Milimeter (mm)</option>
+                            <option value="cm" selected>Sentimeter (cm)</option>
+                            <option value="m">Meter (m)</option>
+                            <option value="km">Kilometer (km)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="button-group">
+                    <button type="button" onclick="convertJS()">Konversi (JavaScript)</button>
+                    <button type="submit">Konversi (PHP)</button>
+                </div>
+            </form>
+
+            <div id="result"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
